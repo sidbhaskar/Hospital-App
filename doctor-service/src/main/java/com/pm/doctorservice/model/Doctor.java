@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 
+import java.time.LocalDate;
 import java.util.UUID;
 
 @Entity
@@ -22,6 +23,9 @@ public class Doctor {
 
     @NotNull
     private String specialization;
+
+    @NotNull
+    private LocalDate registeredDate;
 
     public UUID getId() {
         return id;
@@ -53,5 +57,13 @@ public class Doctor {
 
     public void setSpecialization(String specialization) {
         this.specialization = specialization;
+    }
+
+    public LocalDate getRegisteredDate() {
+        return registeredDate;
+    }
+
+    public void setRegisteredDate(LocalDate registeredDate) {
+        this.registeredDate = registeredDate;
     }
 }

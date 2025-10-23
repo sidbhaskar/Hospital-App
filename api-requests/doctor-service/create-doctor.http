@@ -1,0 +1,12 @@
+### Post request to create patient
+POST http://localhost:4006/doctors
+Content-Type: application/json
+
+{
+  "name": "Dr. Good Man",
+  "email": "doctorMail@email.com",
+  "specialization": "Eye doctor",
+  "registeredDate": "2025-10-23"
+}
+
+###
